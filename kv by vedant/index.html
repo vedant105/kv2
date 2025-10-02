@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Shri Kendriya Vidyalaya NO. 2 C.P.E. Itarsi - Excellence in Education</title>
+    <meta name="description" content="PM Shri Kendriya Vidyalaya NO. 2 C.P.E. Itarsi - Providing quality education with modern facilities and dedicated faculty">
+    <meta name="keywords" content="Kendriya Vidyalaya, KV Itarsi, school, education, admission, CBSE">
+    <meta property="og:title" content="PM Shri Kendriya Vidyalaya NO. 2 C.P.E. Itarsi">
+    <meta property="og:description" content="Excellence in Education - Modern school with comprehensive academic programs">
+    <meta name="twitter:title" content="PM Shri Kendriya Vidyalaya NO. 2 C.P.E. Itarsi">
+    <meta name="twitter:description" content="Excellence in Education - Modern school with comprehensive academic programs">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #1e40af;
+            --secondary-color: #f59e0b;
+            --accent-color: #10b981;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #3b82f6;
+            --secondary-color: #fbbf24;
+            --accent-color: #34d399;
+            --text-primary: #f9fafb;
+            --text-secondary: #d1d5db;
+            --bg-primary: #111827;
+            --bg-secondary: #1f2937;
+            --border-color: #374151;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-primary);
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-secondary {
+            @apply px-6 py-3 rounded-lg font-semibold border-2 transition-all duration-300;
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            background-color: transparent;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .card {
+            @apply rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl;
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+        }
+        
+        .nav-link {
+            @apply px-4 py-2 rounded-lg transition-all duration-300;
+            color: var(--text-primary);
+        }
+        
+        .nav-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+    }
+
+    @layer utilities {
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Hero.js"></script>
+    <script type="text/babel" src="components/QuickLinks.js"></script>
+    <script type="text/babel" src="components/Achievements.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="utils/themeToggle.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
